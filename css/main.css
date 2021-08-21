@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --lexend-deca: "Lexend Leca", sans-serif;
+  --big-shoulders: "Big Shoulders Display", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: var(--lexend-deca);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.cards {
+  border-radius: 6px;
+  display: grid;
+  flex-grow: 1;
+  /* grid-template-rows: repeat(3, 1fr); */
+  margin: 50px auto;
+  /* min-height: calc(100vh - 30px); */
+  overflow: hidden;
+  width: 70vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-block: 35px;
+  padding-inline: 32px;
+}
+
+.card__content {
+  color: var(--very-light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card__content img {
+  width: 45px;
+}
+
+.card__title {
+  font-family: var(--big-shoulders);
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card__description {
+  color: var(--transparent-white);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  line-height: 15px;
+}
+
+.card__button{
+  display: inline-block;
+  border-radius: 30px;
+  background-color: var(--very-light-gray);
+  font-size: 1rem;
+  max-width: 120px;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.card--one {
+  background-color: var(--bright-orange);
+}
+
+.card--one a {
+  color: var(--bright-orange);
+}
+
+.card--two {
+  background-color: var(--dark-cyan);
+}
+
+.card--two a {
+  color: var(--dark-cyan);
+}
+
+.card--three {
+  background-color: var(--very-dark-cyan);
+}
+
+.card--three a {
+  color: var(--very-dark-cyan);
+}
+
+footer {
+  align-items: center;
+  background-color: #334756;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  /* left: 0;
+  bottom: 0;
+  position: fixed; */
+  width: 100%;
+}
+
+footer p {
+  color: var(--very-light-gray);
+  font-size: 1.4rem;
+}
+
+footer a {
+  color: #96baff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #b8b5ff;
+  text-decoration: underline;
+}
