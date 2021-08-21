@@ -34,6 +34,7 @@ html {
   /* grid-template-rows: repeat(3, 1fr); */
   margin: 50px auto;
   /* min-height: calc(100vh - 30px); */
+  max-width: 360px;
   overflow: hidden;
   width: 70vw;
 }
@@ -71,7 +72,7 @@ html {
   line-height: 15px;
 }
 
-.card__button{
+.card__button {
   display: inline-block;
   border-radius: 30px;
   background-color: var(--very-light-gray);
@@ -132,4 +133,40 @@ footer a {
 footer a:hover {
   color: #b8b5ff;
   text-decoration: underline;
+}
+
+/* ------------------- Laptop ------------------- */
+@media screen and (min-width: 1024px) {
+  .cards {
+    align-items: center;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    max-width: none;
+    width: auto;
+  }
+
+  .cards .card:first-of-type {
+    border-radius: 6px 0px 0px 6px;
+  }
+
+  .cards .card:last-of-type {
+    border-radius: 0px 6px 6px 0px;
+  }
+
+  .card {
+    gap: 70px;
+    height: 100%;
+    max-width: 240px;
+    padding-block-end: 40px;
+  }
+
+  .card__description {
+    font-size: 1.2rem;
+    line-height: 22px;
+  }
+
+  .card__button {
+    font-size: 1.2rem;
+  }
 }
